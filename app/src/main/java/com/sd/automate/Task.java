@@ -1,10 +1,14 @@
+package com.sd.automate;
+
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created by Saurabh on 22.01.2016.022.
  */
 public class Task {
-    private String taskName; //Task name
+    private UUID mId;
+    private String taskName; //com.sd.automate.Task name
     private String[] taskDetail; //String array for task details
     private Date scheduleDate; //Next scheduled date
     private int nextDay; // 0-6 for Sunday-Saturday
@@ -13,6 +17,17 @@ public class Task {
     private int nextWeek; //next week task will schedule
     private int nextYear; //next year task will schedule
     private String[] appName; //App(s) to launch
+    private Boolean complete;
+
+    public UUID getId() { return mId; }
+
+    public Boolean getComplete() {
+        return complete;
+    }
+
+    public void setComplete(Boolean complete) {
+        this.complete = complete;
+    }
 
     public String getTaskName() {
         return taskName;
@@ -84,5 +99,11 @@ public class Task {
 
     public void setAppName(String[] appName) {
         this.appName = appName;
+    }
+
+    public Task(Boolean complete) {
+        this.mId = UUID.randomUUID();
+        this.complete = complete;
+        this.scheduleDate = new Date();
     }
 }

@@ -4,4 +4,14 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="task_title_hint">Enter Task</string>
+    <string name="task_title_label">Title</string>
+    <string name="task_detail_label">Details</string>
+    <string name="task_complete_label">Complete?</string>
+    <string name="date_picker_title">Next Date:</string>
+    <array name="task_freq_array">
+        <item>Daily</item>
+        <item>Weekly on same day</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </array>
 </resources>
